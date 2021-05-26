@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <h2>Matching Text</h2>
+    <p></p>
+    <form name="myForm" ng-controller="HomeController">
+        <br />
+        <div class="form-group form-group-lg">
+            <label for="">Enter Main Text:</label>
+            <input class="form-control" type="text" name="input" ng-model="txt.main">
+        </div>
+        <div class="form-group">
+            <label for="">Enter Sub Text:</label>
+            <input class="form-control" type="text" name="input" ng-model="txt.sub">
+        </div>
+        <div class="form-group">
+            <input type="submit" ng-click="LoadMatchResult(txt)" value="Check" />
+        </div>
+        <br />
+        <div>
+            <code>Result = {{getresult}}</code>
+        </div>
+        <br />
+    </form>
+</div>
+
